@@ -44,14 +44,17 @@ if (Person.hasOwnProperty("gender")) {
 console.log(Person);
 
 // 8)გადაუარეთ for ციკლით ობიექტს და დაპრინტეთ ყველა property.
+// 9)გადაუარეთ for ციკლით ობიექტს და დაპრინტეთ ყველა value. 
 // const keys = Object.keys(Person); // Object.keys() Mეშვეობით დაიპრინტება
 // console.log(keys);
 
 function keys() {
 for (let key in Person) {
+  const parameter = Person[key];
   console.log(key);
+  console.log(parameter);
 }
 }
 keys(Person);
 
-// 9)გადაუარეთ for ციკლით ობიექტს და დაპრინტეთ ყველა value. 
+
