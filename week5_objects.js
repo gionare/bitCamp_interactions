@@ -1,6 +1,7 @@
 // 1)შექმენით ობიექტი სახელად Person,ობიექტს ექნება სახელი,გვარი,ასაკი.
 const Person = {
   name: "Giorgi",
+  lastname: "Nareklishvili",
   year: "1993",
   city: "Tbilisi",
 }
