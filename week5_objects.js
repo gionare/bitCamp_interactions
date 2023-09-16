@@ -31,6 +31,9 @@ Person.jobLength = function () {
 console.log(Person.jobLength());
 
 // 6)ამის შემდეგ დაპრინტეთ უბრალოდ ობიექტში არსებული მეთოდების რაოდენობა.
+// print number of properties
+let numberOfKeys = Object.keys(Person).length;
+console.log("6) NUmber of keys in Person Object is : " + numberOfKeys);
 
 // 7)გაარკვიეთ ,აქვს თუარა ობიექტს gender property ,თუ არაქვს ,მაშინ შექმენით მეთოდი .
 
