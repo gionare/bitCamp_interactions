@@ -9,15 +9,26 @@ console.log(Person);
 // 2)დაამატეთ ობიექტში  ფუნქცია სახელად  sayHello რომელიც დაპრინტავს ობიექტში 
 // სახელის values.
 Person.sayHello = function() {
-  console.log("Hello " + this.name);
+  console.log("Hello " + Person.name);
 };
 Person.sayHello();
 
 // 3) წაშალეთ ასაკის property.
+//delete Person.year; //to delete whole key
+Person.year = undefined;
+delete Person.year;
+
 
 // 4)დაამატეთ ობიექტში job.
+Person.job = "Developer";
+console.log(Person);
 
 // 5)დაამატეთ ობიექტში ფუნქცია რომელიც დააბრუნებს ობიექტის job-ის სიგრძეს.
+let jobLength = 0;
+Person.jobLength = function () {
+  return Person.job.length
+}
+console.log(Person.jobLength());
 
 // 6)ამის შემდეგ დაპრინტეთ უბრალოდ ობიექტში არსებული მეთოდების რაოდენობა.
 
