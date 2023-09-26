@@ -153,6 +153,8 @@ const Person = {
 }
 console.log(Person.name);
 // 18)დაამატეთ ახალი თვისება სახელწოდებით job, Person ობიექტს და მიანიჭეთ მას მნიშვნელობა. დაბეჭდეთ განახლებული ობიექტი.
+Person.job = "Driver";
+console.log(Person);
 
 // 3
 
