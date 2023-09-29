@@ -133,6 +133,12 @@ for (const element of numbers) {
 console.log(commonElements);
 
 // 15)შექმენით ობიექტი სახელწოდებით car თვისებებით მარკის, მოდელისა და წლისთვის. დაბეჭდეთ ობიექტი კონსოლზე
+const car = {
+  brand: "Porsche",
+  model: "911 GT3",
+  year: "2020",
+}
+console.log(car);
 
 // 16)დაამატეთ მეთოდი car ობიექტს სახელწოდებით start, რომელიც ბეჭდავს "The car is starting!" როდესაც გამოძახება. გამოიძახეთ დაწყების მეთოდი.
 
