@@ -124,6 +124,13 @@ console.log(compareArrays(numbers, numbers2));
 console.log(fruits.sort());
 
 // 14)დაწერეთ პროგრამა მრავალ მასივებს შორის საერთო ელემენტების მოსაძებნად.
+const commonElements = [];
+for (const element of numbers) {
+  if (numbers2.includes(element)) {
+    commonElements.push(element);
+  } 
+}
+console.log(commonElements);
 
 // 15)შექმენით ობიექტი სახელწოდებით car თვისებებით მარკის, მოდელისა და წლისთვის. დაბეჭდეთ ობიექტი კონსოლზე
 
