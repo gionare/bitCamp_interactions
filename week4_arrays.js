@@ -121,7 +121,7 @@ return true; // if all ifs above wouldn't work
 console.log(compareArrays(numbers, numbers2));
 
 // 13)დაწერეთ პროგრამა სტრიქონების მასივის ანბანის მიხედვით დასალაგებლად.
-
+console.log(fruits.sort());
 
 // 14)დაწერეთ პროგრამა მრავალ მასივებს შორის საერთო ელემენტების მოსაძებნად.
 
