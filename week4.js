@@ -27,7 +27,11 @@ for (const number of numbers) {
 console.log("The average of array: " + average);
 
 // 3)დაწერეთ პროგრამა რიცხვების მასივის ზრდის მიხედვით დასალაგებლად.
+// 12)დაწერეთ პროგრამა რომ ორი სორტირებული მასივის შერთდეს და გახდეს ერთი მასივი რომელიც ასევე სორტირებული იქნება.
+
 console.log(numbers.sort());
+let combinedArrays = numbers.concat(numbers2);
+console.log(combinedArrays.sort());
 
 // 4)დაწერეთ პროგრამა მასივში ყველაზე დიდი ელემენტის მოსაძებნად.
 const maxNumber = Math.max(...numbers); // using Math.max( array ) function
@@ -115,9 +119,6 @@ for (let i = 0; i < numbers.length; i++) {
 return true; // if all ifs above wouldn't work
 }
 console.log(compareArrays(numbers, numbers2));
-
-
-// 12)დაწერეთ პროგრამა რომ ორი სორტირებული მასივის შერთდეს და გახდეს ერთი მასივი რომელიც ასევე სორტირებული იქნება.
 
 // 13)დაწერეთ პროგრამა სტრიქონების მასივის ანბანის მიხედვით დასალაგებლად.
 
