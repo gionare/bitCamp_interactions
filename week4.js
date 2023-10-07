@@ -99,8 +99,23 @@ for (let i = 0; i < numbers.length; i++) {
 }
 findSecondLargestN();
 
-
 // 11)დაწერეთ პროგრამა, რათა შეამოწმოთ არის თუ არა ორი მასივი ტოლი.
+function compareArrays(pararray1, array2) {
+  
+if (numbers.length !== numbers2.length) {  //if array lenght is qeual
+  return false;
+}
+
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] !== numbers2[i]) {
+    return false;
+  }
+}
+
+return true; // if all ifs above wouldn't work
+}
+console.log(compareArrays(numbers, numbers2));
+
 
 // 12)დაწერეთ პროგრამა რომ ორი სორტირებული მასივის შერთდეს და გახდეს ერთი მასივი რომელიც ასევე სორტირებული იქნება.
 
