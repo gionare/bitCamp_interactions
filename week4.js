@@ -1,4 +1,4 @@
-// created 3 arrays for exercising
+// created 3 global arrays for exercising
 const fruits = [
   "apple",
   "banana",
@@ -8,7 +8,7 @@ const fruits = [
   "fig",
   "grape",
 ];
-const numbers = [22, 1, 55555, 4444, 333];
+const numbers = [22, 1, 55555, 4444, 333]; 
 const numbers2 = [9, 88, 777, 6666, 55555];
 console.log(fruits, numbers, numbers2);
 
@@ -32,7 +32,7 @@ console.log(numbers.sort());
 // 4)დაწერეთ პროგრამა მასივში ყველაზე დიდი ელემენტის მოსაძებნად.
 const maxNumber = Math.max(...numbers); // using Math.max( array ) function
 console.log(...numbers); //spread operator to create a shallow copy of an array or merge multiple arrays into a new array.
-console.log(maxNumber);
+console.log("4) " + maxNumber);
 
 // 5)დაწერეთ პროგრამა მასივის ყველაზე პატარა ელემენტის მოსაძებნად.
 const minNumber = Math.min(...numbers);
@@ -83,6 +83,22 @@ dublicateCheck();
 
 
 // 10)დაწერეთ პროგრამა მასივში სიდიდით მეორე რიცხვის მოსაძებნად.
+largestN = 0;
+secLargestN = 0;
+
+function findSecondLargestN() {
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] > largestN) {  // შევადაროთ უდიდესს, მანამ სანამ უდიდესი აღარ გაიზრდება 
+    secLargestN = largestN;    // უდიდესს გაუტოლდეს
+    largestN = numbers[i];     // უდიდესი გაზარდოს
+  } else if (numbers[i] > secLargestN && numbers[i] !== largestN) {   
+    secLargestN = numbers[i];
+  }
+}
+  console.log("10) Second largest N: " + secLargestN);
+}
+findSecondLargestN();
+
 
 // 11)დაწერეთ პროგრამა, რათა შეამოწმოთ არის თუ არა ორი მასივი ტოლი.
 
