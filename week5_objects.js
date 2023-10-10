@@ -8,6 +8,10 @@ console.log(Person);
 
 // 2)დაამატეთ ობიექტში  ფუნქცია სახელად  sayHello რომელიც დაპრინტავს ობიექტში 
 // სახელის values.
+Person.sayHello = function() {
+  console.log("Hello " + this.name);
+};
+Person.sayHello();
 
 // 3) წაშალეთ ასაკის property.
 
