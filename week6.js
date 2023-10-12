@@ -1,13 +1,17 @@
 // 1)დაწერეთ ფუნქცია generateRandomNumber, 
 //რომელიც იღებს მინიმალურ და მაქსიმალურ რიცხვს არგუმენტებად 
 //და აბრუნებს შემთხვევით რიცხვს მინიმალურ და მაქსიმალურ მნიშვნელობებს შორის.
-function generateRandomNumber(){
-    
+function generateRandomNumber(numbers){
+
 }
 
 // 2)დაწერეთ ფუნქცია სახელწოდებით capitalizeWords, 
 //რომელიც იღებს წინადადებას (სტრიქონს) არგუმენტად 
 //და აბრუნებს ახალ წინადადებას, სადაც თითოეული სიტყვის პირველი ასო დიდია.
+function capitalizeWords(string){
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+console.log(capitalizeWords("first Letter should be capital"));
 
 // 3)დაწერეთ ფუნქცია, რომელიც მიიღებს ობიექტების მასივს 
 //და თვისების სახელს და აბრუნებს ამ თვისების უნიკალური მნიშვნელობების მასივს ყველა ობიექტიდან.
