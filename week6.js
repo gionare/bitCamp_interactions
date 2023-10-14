@@ -1,7 +1,12 @@
 // 1)დაწერეთ ფუნქცია generateRandomNumber, 
 //რომელიც იღებს მინიმალურ და მაქსიმალურ რიცხვს არგუმენტებად 
 //და აბრუნებს შემთხვევით რიცხვს მინიმალურ და მაქსიმალურ მნიშვნელობებს შორის.
-//
+// The Math.random() function generates a random number between 0 (inclusive) and 1 (exclusive).
+// To get a random number between min (inclusive) and max (inclusive): Math.floor(Math.random() * (max - min + 1)) + min
+function generateRandomNumber(a,b){
+    console.log("your average number is: " + Math.floor(Math.random() * (b - a + 1)) + a);
+}
+generateRandomNumber(5,10);
 
 // 2)დაწერეთ ფუნქცია სახელწოდებით capitalizeWords, 
 //რომელიც იღებს წინადადებას (სტრიქონს) არგუმენტად 

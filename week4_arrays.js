@@ -8,7 +8,7 @@ const fruits = [
   "fig",
   "grape",
 ];
-const numbers = [22, 1, 55555, 4444, 333]; 
+const numbers = [22, 1, 55555, 4444, , 88, 333]; 
 const numbers2 = [9, 88, 777, 6666, 55555];
 console.log(fruits, numbers, numbers2);
 
@@ -130,7 +130,7 @@ for (const element of numbers) {
     commonElements.push(element);
   } 
 }
-console.log(commonElements);
+console.log("14) " + commonElements);
 
 // 15)შექმენით ობიექტი სახელწოდებით car თვისებებით მარკის, მოდელისა და წლისთვის. დაბეჭდეთ ობიექტი კონსოლზე
 const car = {
