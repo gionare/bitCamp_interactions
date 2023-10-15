@@ -67,7 +67,7 @@ function checkForPangram(string){
         return uniqueLetters.length === 26;
     } 
 }
-
+console.log("example N4: ");
 console.log(checkForPangram("zxcvbnmasdfghjklqwertyuiop"));
 
 // 5)დაწერეთ ფუნქცია, რომელიც მიიღებს წინადადებას შეყვანად და აბრუნებს უნიკალური სიტყვების მასივს 
@@ -81,6 +81,7 @@ function unicWords(string){
         console.log([word]);
         if (!wordsArray.includes(word) && word !== "the" && word !=="a" && word !== "is") {
             unicWords.push(word);
+            unicWords.filter("the", "a", "is")
         }
        console.log(unicWords);
       
@@ -100,7 +101,7 @@ function swappWordsSequence(sentence){
     console.log(wordsArray);
     const swappedWords = [];
 
-    for (let i = wordsArray.length; i >= 0; i--) {
+    for (let i = wordsArray.length - 1; i >= 0; i--) {
         swappedWords.push(wordsArray[i]);
     }
     console.log(swappedWords);
