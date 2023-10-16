@@ -1,4 +1,18 @@
+"use strict";
 const numbersArray = [2, 3, 4, 44, 55, 66, 777, 999, 50];
+const myObject = { name: "Giorgi", lastname: "Nareklishvili", year: "1993", city: "Tbilisi" };
+const myObjectsArray = [
+    { name: "Giorgi", 
+    lastname: "Nareklishvili",
+    year: "1993",
+}, 
+    {name: "Peter", 
+    lastname: "Peterson",
+}, 
+    {name: "Pavle",
+    lastname:"Pavlov",
+},
+];
 
 
 // 1)დაწერეთ ფუნქცია generateRandomNumber, 
@@ -21,19 +35,92 @@ console.log(capitalizeWords("first Letter should be capital"));
 
 // 3)დაწერეთ ფუნქცია, რომელიც მიიღებს ობიექტების მასივს 
 //და თვისების სახელს და აბრუნებს ამ თვისების უნიკალური მნიშვნელობების მასივს ყველა ობიექტიდან.
+// returnkeys function for singe object 
+function returnkeys(object) {
+    for (const key in object) {
+        console.log("example 3): " + key);
+    }
+}
+returnkeys(myObject);
+
+// return keys from all objects  
+function returnKeys(arrayOfObjects) {
+    const keysArray = [];
+    for (const object of arrayOfObjects) {
+        for (const key in object) {
+            keysArray.push(key);
+        }
+    }
+    console.log(keysArray);
+}
+returnKeys(myObjectsArray);
+
 
 // 4)დაწერეთ ფუნქცია, რომელიც იღებს სტრიქონს შეყვანად 
 //და აბრუნებს ჭეშმარიტს, თუ ის არის პანგრამა (შეიცავს ანბანის ყველა ასოს ერთხელ მაინც), ცრუ სხვა შემთხვევაში.
+function checkForPangram(string){
+    const uniqueLetters = [];
+    for (const char of string) {
+        if (char >= 'a' && char <= 'z' && !uniqueLetters.includes(char)) {
+            uniqueLetters.push(char);
+        }
+        return uniqueLetters.length === 26;
+    } 
+}
+
+console.log(checkForPangram("zxcvbnmasdfghjklqwertyuiop"));
 
 // 5)დაწერეთ ფუნქცია, რომელიც მიიღებს წინადადებას შეყვანად და აბრუნებს უნიკალური სიტყვების მასივს 
 //ანბანური თანმიმდევრობით, გამოკლებით გავრცელებული ინგლისური სიტყვების, როგორიცაა "the", "a" და "is".
+function unicWords(string){
+    const wordsArray = string.split(" ");
+    console.log(wordsArray);
+    const unicWords = [];
+
+    for (const word of wordsArray) {
+        console.log([word]);
+        if (!wordsArray.includes(word) && word !== "the" && word !=="a" && word !== "is") {
+            unicWords.push(word);
+        }
+       console.log(unicWords);
+      
+    }
+}
+unicWords("The picture is hanging on a hanger hanger");
 
 // 6)დაწერეთ პროგრამა, რომ ამოიღოთ ყველა ცრუ მნიშვნელობა მასივიდან.
+const falsyValues = [undefined, null, NaN, 0, "", false, "2023"] 
+const fileterdArray = falsyValues.filter(value => value);
+console.log("6) " + fileterdArray);
+
 
 // 7)დაწერეთ პროგრამა წინადადებაში სიტყვების თანმიმდევრობის შესაბრუნებლად.
+function swappWordsSequence(sentence){
+    const wordsArray = sentence.split(" ");
+    console.log(wordsArray);
+    const swappedWords = [];
+
+    for (let i = wordsArray.length; i >= 0; i--) {
+        swappedWords.push(wordsArray[i]);
+    }
+    console.log(swappedWords);
+}
+swappWordsSequence("swapping words in sequence")
 
 
 // 8)დაწერეთ პროგრამა, რათა შეამოწმოთ არის თუ არა სტრიქონი პალინდრომი.
+function isPalindrome(word) {     
+   // Reverse the word and compare it to the original.
+   const reversedWord = word.split('').reverse().join('');
+ 
+   return word === reversedWord;
+ }
+ 
+  
+  console.log(isPalindrome("racecar"));
+  console.log(isPalindrome("game"));
+
+
 
 // 9)დაწერეთ პროგრამა,რომელიც იპოვის მასივში ყველაზე დიდ რიცხვს(არ გამოვიყენოთ სორტი)
 console.log(Math.max(...numbersArray));

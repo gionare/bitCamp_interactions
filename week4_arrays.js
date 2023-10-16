@@ -142,7 +142,7 @@ console.log(car);
 
 // 16)დაამატეთ მეთოდი car ობიექტს სახელწოდებით start, 
 // რომელიც ბეჭდავს "The car is starting!" როდესაც გამოძახება. გამოიძახეთ დაწყების მეთოდი.
-console.log(car.start = "car is satrting!");
+console.log(car.start = "car is starting!");
 console.log(car);
 
 // 17)შექმენით სხვა ობიექტი სახელად Person სახელის, ასაკისა და ქალაქის თვისებებით. დაბეჭდეთ სახელის თვისება წერტილის გამოყენებით.
