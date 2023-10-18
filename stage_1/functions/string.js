@@ -27,3 +27,21 @@ function capitalWord(text) {
 
 }
 console.log(capitalWord('the quick brown fox'));
+
+
+
+// Write a JavaScript function that returns a string that has letters in alphabetical order.
+// Example string : 'webmaster'
+
+//solution
+// Create a function alphabetizeString that takes a string as input.
+// Convert the input string into an array of characters .split('')
+// Use the sort method to sort the characters in the array in alphabetical order.
+// After sorting, use the join method to concatenate the sorted characters back into a string.
+// Return the alphabetized string.
+
+function aToZ(str) {
+    console.log(str);
+    return str.split('').sort().join('');
+}
+console.log(aToZ("webmaster"));
