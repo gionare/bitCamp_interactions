@@ -14,21 +14,17 @@
 // Return the capitalized string.
 
 function capitalWord(text) {
-    const words = text.split(" ");
-    console.log(words);
-    const capitalWords = [];
+  const words = text.split(" ");
+  console.log(words);
+  const capitalWords = [];
 
-    for (const word of words) {
-        const capitalWord = word[0].toUpperCase() + word.slice(1);
-        capitalWords.push(capitalWord);
-       
-    }
-    return capitalWords.join(" ");
-
+  for (const word of words) {
+    const capitalWord = word[0].toUpperCase() + word.slice(1);
+    capitalWords.push(capitalWord);
+  }
+  return capitalWords.join(" ");
 }
-console.log(capitalWord('the quick brown fox'));
-
-
+console.log(capitalWord("the quick brown fox"));
 
 // Write a JavaScript function that returns a string that has letters in alphabetical order.
 // Example string : 'webmaster'
@@ -41,7 +37,61 @@ console.log(capitalWord('the quick brown fox'));
 // Return the alphabetized string.
 
 function aToZ(str) {
-    console.log(str);
-    return str.split('').sort().join('');
+  console.log(str);
+  return str.split("").sort().join("");
 }
 console.log(aToZ("webmaster"));
+
+// Write a JavaScript function that generates all combinations of a string.
+// Example string : 'dog'
+// Expected Output : d,do,dog,o,og,g
+
+// function combination(str){
+//     console.log(str);
+//     str.split('');
+//     console.log(str);
+//     return
+// }
+// console.log(combination("dog"));
+
+// Algorithm:
+// Create a function, combinations, that takes the input string as a parameter.
+// Determine the total number of combinations, which is equal to 2 to the power of the string length (2^n).
+// Initialize an array to store the results.
+
+function combinations(inputString) {
+    let tempArr = [];
+    let resultArr = [];
+
+    for (let i = 0; i < inputString.length; i++) {
+      tempArr = [inputString[i]];
+      let index = 0;
+      while (resultArr[index]) {
+        tempArr.push("" + resultArr[index] + inputString[i] )
+        index++;
+      }
+
+      resultArr = resultArr.concat(tempArr);
+    }
+
+    return resultArr;
+  }
+
+  // Example usage:
+  console.log(combinations("dog"));
+
+
+// better code and simplier to solve the problem 
+// use debuging 
+function combinations(str) {
+  const results = [];
+
+  for (let i = 0; i < str.length; i++) {
+    for (let j =  i + 1; j <= str.length; j++) {
+      results.push(str.slice(i, j));
+    }
+  }
+  return results;
+}
+console.log(combinations("dog"));
+
