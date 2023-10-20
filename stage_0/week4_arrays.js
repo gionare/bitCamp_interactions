@@ -53,6 +53,16 @@ console.log(findElement);
 
 // 7)დაწერეთ პროგრამა მასივიდან ელემენტის ამოსაღებად.
 // Write a program to remove an element from an array.
+function includes(arr, element ){
+
+
+for (let number of arr) {
+  if (number === element) {
+    return true
+  }
+}
+}
+
 const removeElement = 2;
 numbers.splice(removeElement, 1); //Remove 1 element starting from the specified index
 console.log(numbers);
@@ -161,3 +171,18 @@ console.log(Person);
 // Follow
 
 // You do not have permission to send messages in this channel.
+
+// function keyValue(obj){
+// }
+// same function but allow function
+const keyValue = (obj) => {
+  console.log(Object.keys(Object));
+  return Object.values(obj), Object.keys(obj);
+} 
+
+let object = {
+  name: "temo",
+  age: 18
+}
+
+console.log(keyValue(object));                                                                                                                        

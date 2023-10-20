@@ -46,48 +46,43 @@ console.log(aToZ("webmaster"));
 // Example string : 'dog'
 // Expected Output : d,do,dog,o,og,g
 
-// function combination(str){
-//     console.log(str);
-//     str.split('');
-//     console.log(str);
-//     return
-// }
-// console.log(combination("dog"));
-
 // Algorithm:
 // Create a function, combinations, that takes the input string as a parameter.
 // Determine the total number of combinations, which is equal to 2 to the power of the string length (2^n).
 // Initialize an array to store the results.
 
 function combinations(inputString) {
-    let tempArr = [];
-    let resultArr = [];
+  let tempArr = [];
+  let resultArr = [];
 
-    for (let i = 0; i < inputString.length; i++) {
-      tempArr = [inputString[i]];
-      let index = 0;
-      while (resultArr[index]) {
-        tempArr.push("" + resultArr[index] + inputString[i] )
-        index++;
-      }
-
-      resultArr = resultArr.concat(tempArr);
+  for (let i = 0; i < inputString.length; i++) {
+    tempArr = [inputString[i]];
+    let index = 0;
+    while (resultArr[index]) {
+      tempArr.push("" + resultArr[index] + inputString[i]);
+      index++;
     }
 
-    return resultArr;
+    resultArr = resultArr.concat(tempArr);
   }
 
-  // Example usage:
-  console.log(combinations("dog"));
+  return resultArr;
+}
 
+// Example usage:
+console.log(combinations("dog"));
 
-// better code and simplier to solve the problem 
-// use debuging 
+// better code and simplier to solve the problem
+// use debuging
+//using array.prototype.slice();
+let example = "protocol";
+console.log("Result should be oto : " + example.slice(2, 5));
+
 function combinations(str) {
   const results = [];
 
   for (let i = 0; i < str.length; i++) {
-    for (let j =  i + 1; j <= str.length; j++) {
+    for (let j = i + 1; j <= str.length; j++) {
       results.push(str.slice(i, j));
     }
   }
@@ -95,3 +90,24 @@ function combinations(str) {
 }
 console.log(combinations("dog"));
 
+// Write a JavaScript function to find the first not repeated character.
+// Sample arguments : 'abacddbec'
+
+function unicWord(str) {
+
+  for (let i = 0; i < str.length; i++) {
+    let isRepeated = false;  
+    for (let j = 0; j < str.length; j++) {
+      if (i !== j && str[i] === str[j]) {
+        isRepeated = true;
+        break;
+      } 
+    }
+    if (!isRepeated){  //after passing 2 for circles, check the status of isRepeated is true or false
+      console.log("non repeated letter is : ");
+      return str[i];
+    }
+  }
+  return nulll; // return null if there is no repeated elements
+}
+console.log(unicWord("abacddbec"));
