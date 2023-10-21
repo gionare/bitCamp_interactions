@@ -30,6 +30,18 @@
 const array = [[1,3],[2,6],[8,10],[15,18]];
 
 function mergeIntervals(arr) {
-    
+    array.sort((a, b) => a[0] - b[0]); // პირველი ელემენტები დალაგდეს ზრდადობით
+    console.log(array);
+
+    if (array[0][1] > array[1][0]) {
+        console.log("need to merge intervals ");
+        array[0][1] = array[1][1];
+        array.splice(1,1);
+        console.log(array);
+
+    } else{
+        console.log("arrays are correctly arranged");
+    }
+
 }
 console.log(mergeIntervals(array));

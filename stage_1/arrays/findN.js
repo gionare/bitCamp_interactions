@@ -10,7 +10,7 @@ function findMissingN (array){
     const expectedSUm = (n * (n + 1)/2);
     //console.log(expectedSUm);
     const actualSum = array.reduce((sum, num) => sum + num, 0); //შეეკითხე .reduce( , 0)
-    //console.log(actualSum);
+    console.log("actualSum = " + actualSum);
     return expectedSUm - actualSum;
 }
 console.log(findMissingN(array));
