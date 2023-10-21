@@ -21,7 +21,7 @@ merge overlapping intervals and return the resulting merged intervals.
 For example, given the intervals [[1,3],[2,6],[8,10],[15,18]], the function should return [[1,6],[8,10],[15,18]].
 
 
-
+// Sandros davalebulebi
 1.Write a function that calculates the sum of all elements in an array.
 2.Create a function that calculates the average of elements in an array.
 3.Implement a function that returns a random element from an array.
