@@ -10,5 +10,8 @@ const carInfo = {
     miata: ['NB', 'ND'],
   }
 };
-
-console.log(carInfo);
+const jsonString = JSON.stringify(carInfo);
+console.log(jsonString);
+//parse it back in new variable 
+const carInfoParsed = JSON.parse(jsonString)
+console.log(carInfoParsed);
