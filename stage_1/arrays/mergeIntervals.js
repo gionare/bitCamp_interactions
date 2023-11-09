@@ -36,8 +36,9 @@ function mergeIntervals(arr) {
     if (array[0][1] > array[1][0]) {
         console.log("need to merge intervals ");
         array[0][1] = array[1][1];
-        array.splice(1,1);
+        let slicedArray = array.splice(1,1);
         console.log(array);
+        console.log(slicedArray);
 
     } else{
         console.log("arrays are correctly arranged");

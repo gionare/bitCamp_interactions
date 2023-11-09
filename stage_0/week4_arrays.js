@@ -113,8 +113,12 @@ for (let i = 0; i < numbers.length; i++) {
 }
 findSecondLargestN();
 
+// let sorted = arr.sort( (a, b) => b - a )
+
 // 11)დაწერეთ პროგრამა, რათა შეამოწმოთ არის თუ არა ორი მასივი ტოლი.
-function compareArrays(pararray1, array2) {
+//if(arr1.includes(arr2{i}))  ინქლუდეს მეთოდი არ აკვირდება ინდექსაციას..  
+
+function compareArrays(4rray2) {
   
 if (numbers.length !== numbers2.length) {  //if array lenght is qeual
   return false;
@@ -126,7 +130,7 @@ for (let i = 0; i < numbers.length; i++) {
   }
 }
 
-return true; // if all ifs above wouldn't work
+return true; // if all above wouldn't work
 }
 console.log(compareArrays(numbers, numbers2));
 
@@ -186,3 +190,13 @@ let object = {
 }
 
 console.log(keyValue(object));                                                                                                                        
+
+// .slice() example
+let word = "Hello world";
+let updatedW = word.slice(1,5);
+console.log(updatedW);
+
+//,splice(საიდან დაიწყოს, რამდენი ელემენტი წაიშალოს, რა დაიმატოს) method example
+let arr5 = [1,2,3,4,5,];
+let updatedW2 = arr5.splice(0,3,"Hელლო ვორდ");
+console.log(updatedW2);

@@ -1,32 +1,42 @@
 'use strict';
 // // Exercise 1: Changing Text Content
-// // Create an HTML page with a <p> element. 
-// Write a JavaScript function that, when called, 
-//changes the text content of the <p> element to "Hello, DOM!".
-console.log(document.querySelector('.bitcamp').textContent); //დავლოგოთ არსებული textContent
+// // <p> element. 
+//changes text content of the <p> element to "Hello, DOM!".
+
+
 // შევცვალოთ არსებული textContent
-function changeTextContent(text) {
-document.querySelector('.bitcamp').textContent = 
-'adjusted text containing for query Selector' ;
+function changeTextContent() {
+    const para = document.querySelector('.paragraph'); 
+    para.textContent = 'Hello DOM!';
 }
-changeTextContent()
 
 
 
 // // Exercise 2: Changing Styles
-// // Create an HTML page with a <button> element. 
-// Write a JavaScript function that, when called, 
+// <button> element. 
 // changes the background color of the <button> to red and the text color to white.
-function changeBtnColor(color) {
-    const button = document.querySelector('.custom-button');
-    button.style.backgroundColor = color ;
+
+function changeBtnColor(){
+    const para = document.querySelector('.paragraph');
+    const newBtnColor = document.querySelector('.custom-button');
+
+    para.style.color = 'green';
+    newBtnColor.style.backgroundColor = 'red';
 }
-changeBtnColor('red');
 
 // // Exercise 3: Creating Elements
 // // Create an HTML page with an empty <div> element. 
 // Write a JavaScript function that, when called, creates a new <p> element 
 // with the text content "New paragraph" and appends it as a child to the <div>.
+
+function newParagraph() {
+    
+
+    const newPara = document.createElement(".p");
+    newPara.textContent = "This is a new Paragraph";
+
+}
+
 
 // // Exercise 4: Event Handling
 // // Create an HTML page with a <button> element. 

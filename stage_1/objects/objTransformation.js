@@ -15,7 +15,7 @@ const person = [
   { id: 2, name: "Bob" },
 ];
 
-function transformArrToObject(array, keyProperty, ValueProperty) {    // ?????ეს ჩანაწერი არ მესმის კარგად.
+function transformArrToObject(array, keyProperty, ValueProperty) {   
   let transformedObj = {};
 
   for (let obj of array) {
