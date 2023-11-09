@@ -32,10 +32,15 @@ function changeBtnColor(){
 function newParagraph() {
     
 
-    const newPara = document.createElement(".p");
-    newPara.textContent = "This is a new Paragraph";
+    const newPara = document.createElement("p");
+    const node = document.createTextNode("This is new paragraph");
+    newPara.appendChild(node);
+
+    const element = document.getElementById("myDiv");
+    element.appendChild(newPara);
 
 }
+newParagraph() //call the function
 
 
 // // Exercise 4: Event Handling
