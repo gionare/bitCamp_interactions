@@ -1,3 +1,11 @@
+// Callbacks
+setTimeout(() => console.log("Tick"), 3000);
+clearTimeout();
+setTimeout(() => {
+  console.log("this was 3 mins delay");
+}, 4000);
+
+
 // 1. ფუნქცია: პარამეტრად მიიღებს callback ფუნქციებს და
 // გამოიძახებს მათ იმის მიხედვით,
 // თუ რამდენად სწორედ შესრულდება რაიმე პირობა
