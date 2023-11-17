@@ -32,3 +32,11 @@ async function getGithubUser(user) {
   
   setTimeout(mainFunction, 10);
   
+
+  // 2. print program after fetching will be done. inc ase of 2 fetching
+  //screenshot 3-4-
+
+
+
+  // 3. fetche 3 dates . and print the one was faster
+  

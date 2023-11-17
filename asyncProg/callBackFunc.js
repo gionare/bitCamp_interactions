@@ -6,6 +6,15 @@ setTimeout(() => {
 }, 4000);
 
 
+// Callback Basics: 
+// Write a function that takes a callback as an argument 
+// and calls it after a delay of 1 second. 
+
+// setTimeout( "functionRef"  , 1000);
+
+
+
+
 // 1. ფუნქცია: პარამეტრად მიიღებს callback ფუნქციებს და
 // გამოიძახებს მათ იმის მიხედვით,
 // თუ რამდენად სწორედ შესრულდება რაიმე პირობა
@@ -48,3 +57,34 @@ function equals() {
   equals()
     .then((result) => console.log(result))
     .catch((error) => console.error(error));
+
+
+    // welcoming user after he inputs his name 
+    // welcoming by alert -- alert("Welcome " + username)
+    // input name by prompt -- prompt("PLease enter ur username. ")
+
+    // function greetings(username) {
+    //   alert("Welcome " + username);
+    // }
+
+    //  console.log(greetings(gionare));
+
+    // greetings = (username) => {alert("Welcome " + username)};
+
+
+
+
+    function greetings(username) {
+      alert('Welcome ' + username);
+    }
+    //the function declaration above is to be passed into the function below thereby making it a callback function.
+    
+    function saveUserName(callback) {
+      var name = prompt('Please enter your username.');
+      callback(username);
+    }
+    //the above function states the callback function as a parameter
+    
+    saveUserName(greetings);
+    //the greetings function (the callback function), is initially declared, then invoked by passing it as an argument into another function.
+    
