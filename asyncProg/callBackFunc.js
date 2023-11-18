@@ -1,31 +1,39 @@
 // Callbacks
-setTimeout(() => console.log("Tick"), 3000);
-clearTimeout();
+const timeoutId = setTimeout(() => console.log("Tick"), 3000);
+clearTimeout(timeoutId);
 setTimeout(() => {
   console.log("this was 3 mins delay");
 }, 4000);
 
 
 // Callback Basics: 
-// Write a function that takes a callback as an argument 
+// 1. Write a function that takes a callback as an argument 
 // and calls it after a delay of 1 second. 
 
-// setTimeout( "functionRef"  , 1000);
+function firstFunc(callback){
+  setTimeout(() => {
+    callback();
+  }, 2000);
+}
 
+function secondFunc() {
+  console.log("Meore funqcia gaeshva, 2 wamis dagvianebit");
+}
 
+firstFunc(secondFunc)
 
 
 // 1. ფუნქცია: პარამეტრად მიიღებს callback ფუნქციებს და
 // გამოიძახებს მათ იმის მიხედვით,
 // თუ რამდენად სწორედ შესრულდება რაიმე პირობა
 
-// function equalCheck(successCalback, errorCallback) {
-//   if (1 + 1 === 2) {
-//     successCalback("Equals");
-//   } else {
-//     errorCallback("Doesn't equal");
-//   }
-// }
+function equalCheck(successCalback, errorCallback) {
+  if (1 + 1 === 2) {
+    successCalback("Equals");
+  } else {
+    errorCallback("Doesn't equal");
+  }
+}
 
 // equalCheck(
 //     (message) =>{
@@ -39,24 +47,24 @@ setTimeout(() => {
 
 // promise version
 
-function equals() {
-    return new Promise((resolve, reject) => {
-      if (1 + 1 === 2) {
-        resolve("Equals");
-      } else {
-        reject("Doesn't equal");
-      }
-    });
-  }
+// function equals() {
+//     return new Promise((resolve, reject) => {
+//       if (1 + 1 === 2) {
+//         resolve("Equals");
+//       } else {
+//         reject("Doesn't equal");
+//       }
+//     });
+//   }
   // console.log(equals());
   
   // * When you log the result of equals(), you're actually logging the Promise object,
   //      not the result of the promise resolution.
   // * To see the result, you should use the .then and .catch methods.
   
-  equals()
-    .then((result) => console.log(result))
-    .catch((error) => console.error(error));
+  // equals()
+  //   .then((result) => console.log(result))
+  //   .catch((error) => console.error(error));
 
 
     // welcoming user after he inputs his name 
@@ -70,21 +78,3 @@ function equals() {
     //  console.log(greetings(gionare));
 
     // greetings = (username) => {alert("Welcome " + username)};
-
-
-
-
-    function greetings(username) {
-      alert('Welcome ' + username);
-    }
-    //the function declaration above is to be passed into the function below thereby making it a callback function.
-    
-    function saveUserName(callback) {
-      var name = prompt('Please enter your username.');
-      callback(username);
-    }
-    //the above function states the callback function as a parameter
-    
-    saveUserName(greetings);
-    //the greetings function (the callback function), is initially declared, then invoked by passing it as an argument into another function.
-    
