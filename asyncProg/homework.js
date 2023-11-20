@@ -7,18 +7,20 @@
 //  1.  Callback Basics: Write a function that takes a callback as an argument and calls it after a delay of 1 second.
 
 function firstFunc(callback) {
-setTimeout( () => { console.log("Hello World!"); } ,3000)
+setTimeout( () => { console.log("1. Done! after 3000 miliseconds"); } ,3000)
 }
 firstFunc()
 
 //  2.   Promise Basics: Create a promise that resolves after 2 seconds and logs a success message.
-// A promise is simply an object that we create
+// A promise is simply an object that we create that will produce a single value some time in the future. 
 // 1) create or return promise with resolve & reject
-// 2) resolve should be siccess and should have setTimeoOut( functionRef, delay )
+// 2) resolve should be saccess and should have setTimeoOut( functionRef, delay )
 
-new Promise()
-
-
+const delayedPromise = new Promise((resolve, reject) => {
+    setTimeout( () => {resolve("2. Success Mesage for you, delayed 2000milisecond")}, 2000 );
+});
+delayedPromise.then( (message) => {console.log(message)} );
+delayedPromise.catch( (error) => {console.error(error)} );
 // let myPromise = new Promise(resolve, reject);
 
 // myPromise.then();
@@ -35,19 +37,19 @@ new Promise()
 
 
 
-// shavifurceli
+// ******************  shavifurceli  *************************
+// object constructor
+// class car{
+//     constructor(color, door, tires){
+//         this.color=color;
+//         this.door=door;
+//         this.tires=tires;
+//     }
+// }
+// let myCar = new car('balck', '6', 'deflated');
+// console.log(myCar);
 
-class car{
-    constructor(color, door, tires){
-        this.color=color;
-        this.door=door;
-        this.tires=tires;
-    }
-}
 
-let myCar = new car('balck', '6', 'deflated');
 
-console.log(myCar);
 
-// chanaweri
-const myPromis = new Promise(function(resolve, reject) {})
+

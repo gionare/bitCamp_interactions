@@ -15,7 +15,6 @@ function firstFunc(callback){
     callback();
   }, 2000);
 }
-
 function secondFunc() {
   console.log("Meore funqcia gaeshva, 2 wamis dagvianebit");
 }
