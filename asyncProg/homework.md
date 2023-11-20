@@ -12,12 +12,6 @@ setTimeout( () => { console.log("Hello World!"); } ,3000)
 firstFunc()
 
 //  2.   Promise Basics: Create a promise that resolves after 2 seconds and logs a success message.
-// A promise is simply an object that we create
-// 1) create or return promise with resolve & reject
-// 2) resolve should be siccess and should have setTimeoOut( functionRef, delay )
-
-new Promise()
-
 
 // let myPromise = new Promise(resolve, reject);
 
@@ -37,17 +31,13 @@ new Promise()
 
 // shavifurceli
 
-class car{
-    constructor(color, door, tires){
-        this.color=color;
-        this.door=door;
-        this.tires=tires;
-    }
+const Obj = {
+    color: "green",
+    door: "4",
+    tires: "inflated",
 }
+console.log(Obj)
 
-let myCar = new car('balck', '6', 'deflated');
+let newObj = new Obj("balck", "6", "deflated");
 
-console.log(myCar);
-
-// chanaweri
-const myPromis = new Promise(function(resolve, reject) {})
+console.log(Obj);
