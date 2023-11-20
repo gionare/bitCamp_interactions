@@ -21,11 +21,11 @@ const delayedPromise = new Promise((resolve, reject) => {
 });
 delayedPromise.then( (message) => {console.log(message)} );
 delayedPromise.catch( (error) => {console.error(error)} );
-// let myPromise = new Promise(resolve, reject);
-
-// myPromise.then();
 
 //  3.   Promise Chain: Create a chain of promises where each resolves after 1 second and logs a message.
+// Create a Function to Return Delayed Promises:
+// Create a Promise Chain:
+// Run the Code:
 
 //  4.   Async/Await: Write an asynchronous function using async/await that simulates fetching data from an API after 2 seconds.
    
