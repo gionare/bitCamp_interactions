@@ -20,7 +20,7 @@ const {model, features, ...rest} = cars.ferrari;
 console.log(`Model name is: ${model} 
 Features are: ${features}`);
 // console.log(rest);
-const [engine,meore] = cars.ferrari.features  //rogor mivagno masivs ???????????
+const [engine,meore] = cars.ferrari.features  //masivistvis mchirdeba [] 
 console.log(`Engine type: ${engine} ${meore}`);
 
 //* using function preference 
