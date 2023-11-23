@@ -13,6 +13,7 @@ const numbers2 = [9, 88, 777, 6666, 55555];
 console.log(fruits, numbers, numbers2);
 
 // 1)დაწერეთ პროგრამა, რომ იპოვოთ მასივის ყველა რიცხვის ჯამი.
+// 1. sum=0; 2. for of  
 let sum = 0;
 for (const number of numbers) {
   sum += number; //sum = sum + number

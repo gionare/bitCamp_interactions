@@ -7,6 +7,10 @@ function numbers() {
 console.log(numbers());
 
 // 2)დაწერეთ პროგრამა წინადადებაში ყველაზე გრძელი სიტყვის სიგრძის საპოვნელად.
+
+
+
+
 function findLongestWord(text) {
     textInArray = text.split(" "); // split by space
     console.log(textInArray);
@@ -26,6 +30,17 @@ function findLongestWord(text) {
 console.log("in you text, the longest word is: " + findLongestWord("bitcamp is awesome and fun"));
 
 // 3)დაწერეთ პროგრამა, რომელიც ბეჭდავს ლუწ რიცხვებს 1-დან 20-მდე for loop-ის გამოყენებით.
+
+// console.log(i);
+let newArr = [];
+for(i=0; i<20 ;i++) {
+if(i%2 === 0){  // 6%2 ===0
+    newArr.push(i);
+}
+}
+console.log(` Third example ${newArr}`);
+
+
 function evenNumbers(number){
     let arr = [];
     console.log(arr);
@@ -39,6 +54,14 @@ function evenNumbers(number){
 evenNumbers(20);
 
 // 4)დაწერეთ პროგრამა, რომელიც სთხოვს მომხმარებელს შეიყვანოს რიცხვი და დაბეჭდოს "Hello!" იმდენჯერ რამდენსაც უდრის ეს  შეყვანილი რიცხვი.
+    //with arrow function
+        let printHelloArrow = (xTimes) => {
+            for (let i = 0; i < xTimes; i++) {
+                console.log("Hello Example 4-th");
+            }
+        };
+        printHelloArrow(2)
+
 function printHello(x){
     for (let i = 0; i < x; i++) {
         console.log("Hello");
@@ -80,7 +103,8 @@ function enterMonth(monthNumber){
 }
 enterMonth(4)
 
-// 7)დაწერეთ პროგრამა, რომელიც სთხოვს მომხმარებელს გამოიცნოს საიდუმლო რიცხვი 1-დან 10-მდე. განაგრძეთ გამოცნობის მოთხოვნა, სანამ ისინი სწორად გამოიცნობენ, while loop-ის გამოყენებით.
+// 7)დაწერეთ პროგრამა, რომელიც სთხოვს მომხმარებელს გამოიცნოს საიდუმლო რიცხვი 1-დან 10-მდე. 
+// განაგრძეთ გამოცნობის მოთხოვნა, სანამ ისინი სწორად გამოიცნობენ, while loop-ის გამოყენებით.
 function guessNumber(randomNumber){
     const fixedNumber = 6;
     while (randomNumber != fixedNumber) {

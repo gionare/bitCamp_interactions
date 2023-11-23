@@ -16,11 +16,10 @@ firstFunc()
 // 1) create or return promise with resolve & reject
 // 2) resolve should be saccess and should have setTimeoOut( functionRef, delay )
 
-const delayedPromise = new Promise((resolve, reject) => {
+const delayedPromise = new Prmise((resolve, reject) => {
     setTimeout( () => {resolve("2. Success Mesage for you, delayed 2000milisecond")}, 2000 );
 });
-delayedPromise.then( (message) => {console.log(message)} );
-delayedPromise.catch( (error) => {console.error(error)} );
+delayedPromise.then( (message) => {console.log(message)} ).catch( (error) => {console.error(error)} );
 
 //  3.   Promise Chain: Create a chain of promises where each resolves after 1 second and logs a message.
 // Create a Function to Return Delayed Promises:

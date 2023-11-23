@@ -20,3 +20,13 @@
 ; 9)დაწერეთ პროგრამა,რომელიც იპოვის მასივში ყველაზე დიდ რიცხვს(არ გამოვიყენოთ სორტი)
 
 ; 10)დაწერეთ პროგრამა,რომელიც შეკრიბავს მასივის ყველა რიცხვს(არ გამოვიყენოთ reduce)
+
+// Regular function
+    function regularFunction(parameters) {
+    // Function body
+    }
+
+// Arrow function
+    const arrowFunction = (parameters) => {
+    // Function body
+    };

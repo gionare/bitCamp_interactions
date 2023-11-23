@@ -8,6 +8,8 @@ sayHello();
 function add(num1, num2){
         return num1 + num2;
      }
+     const add = (a, b) => a + b ;
+
      //let sum = add(Math.random(), Math.random());
      let sum = add(2,6);
      console.log(sum);
