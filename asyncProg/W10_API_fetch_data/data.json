@@ -9,7 +9,11 @@
       "task": "random",
       "completed": false,
       "id": 30
+    },
+    {
+      "task": "prepare for the exams",
+      "completed": false,
+      "id": 31
     }
-    
   ]
 }
