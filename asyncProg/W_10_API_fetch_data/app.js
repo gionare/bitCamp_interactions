@@ -71,7 +71,7 @@
 // }
 // completeTodo(28)
 
-// 4. delete all the todos that are already completed
+// 4. delete all the todos that are already completed and has nothing in it 
 
 async function getCompletedTodos() {
     try {
@@ -83,7 +83,7 @@ async function getCompletedTodos() {
         // console.log(todos);
 
         //filter todos, filter is hight order method
-        const completedTodos = todos.filter( (todo) => todo.completed);
+        const completedTodos = todos.filter( (todo) => todo.completed == undefined);  //and delete also objects which todo.complated == undefined
         //console.log(completedTodos); // show filtered array
         return completedTodos;
     } catch (error) {
@@ -104,10 +104,13 @@ async function deleteTodo() {
         if (!response.ok) throw new Error ("Failed to Delete todo")
         });
     } catch (error) {
-        console.log(error.message);
+        console.error(error.message);
     }
 }
 deleteTodo();
 
 //questions, 
-// 1. what exactly is doing response.ok 
+// 1. what exactly is doing response.ok --> it is connected with error status, if its 200 then response.ok will be true
+
+
+

@@ -119,7 +119,7 @@ findSecondLargestN();
 // 11)დაწერეთ პროგრამა, რათა შეამოწმოთ არის თუ არა ორი მასივი ტოლი.
 //if(arr1.includes(arr2{i}))  ინქლუდეს მეთოდი არ აკვირდება ინდექსაციას..  
 
-function compareArrays(4rray2) {
+function compareArrays(Array2) {
   
 if (numbers.length !== numbers2.length) {  //if array lenght is qeual
   return false;

@@ -24,7 +24,8 @@ async function fetchDAta() {
 }
 fetchDAta();
 
-// API HTTP methods : GET, POST, DELETE, PUT 
+// API HTTP methods : GET, POST, DELETE, PUT, PATCH 
+// PATCH --> updates object, but different than POST method
 // fetch() default ად არის get მეთოდი.  fetch("Protocol_DomainName_Path_EndPOint")
 
 // *********************************************************************************

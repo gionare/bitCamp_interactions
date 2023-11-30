@@ -41,4 +41,29 @@ async function postData() {
 postData();
 
 // *********************** PUT method * უკვე არსებულის ჩანაცვლება ***************************
+// endpointze უნდა გავგზავნო request ი 
 
+// async function putData () {
+//         const response = await fetch ("http://localhost:3000/people/6", {
+//             method: "PUT",
+//             headers: {
+//                 "Content-Type": "application/JSON",
+//             },
+//             body: JSON.stringify({
+//                 name: "put method- Boria",
+//                 age: 8,
+//             }),
+//         });
+//         console.log(response);
+//     }
+//     putData()
+
+// *********************** DELETE method * უკვე არსებულის წაშლა ***************************
+
+// async function deleteData(){
+//     const response = await fetch ("http://localhost:3000/people/13", {
+//         method: "DELETE",
+// });
+//     console.log(response);
+// }
+// deleteData()

@@ -1,9 +1,9 @@
 // Callbacks
-const timeoutId = setTimeout(() => console.log("Tick"), 3000);
-clearTimeout(timeoutId);
-setTimeout(() => {
-  console.log("this was 3 mins delay");
-}, 4000);
+// const timeoutId = setTimeout(() => console.log("Tick"), 3000);
+// clearTimeout(timeoutId);
+// setTimeout(() => {
+//   console.log("this was 3 mins delay");
+// }, 4000);
 
 
 // Callback Basics: 
@@ -26,13 +26,13 @@ firstFunc(secondFunc)
 // გამოიძახებს მათ იმის მიხედვით,
 // თუ რამდენად სწორედ შესრულდება რაიმე პირობა
 
-function equalCheck(successCalback, errorCallback) {
-  if (1 + 1 === 2) {
-    successCalback("Equals");
-  } else {
-    errorCallback("Doesn't equal");
-  }
-}
+// function equalCheck(successCallback, errorCallback) {
+//   if (1 + 1 === 2) {
+//     successCallback("Equals");
+//   } else {
+//     errorCallback("Doesn't equal");
+//   }
+// }
 
 // equalCheck(
 //     (message) =>{
