@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Giorgi",
+      "boorowedBooks": []
+    },
+    {
+      "name": "Ani",
+      "borrowedBooks": [],
+      "id": 2
+    },
+    {
+      "name": "Nika",
+      "borrowedBooks": [],
+      "id": 4
+    },
+    {
+      "name": "Sara",
+      "borrowedBooks": [],
+      "id": 5
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "name": "1984",
+      "authot": "George Orwell"
+    }
+  ]
+}
