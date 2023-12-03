@@ -8,10 +8,10 @@
   - დაწერეთ ფუნქცია, რომელიც დაამატებს ახალ იუზერებს -- ""POST"
   - დაწერეთ ფუნქცია, რომელიც ამოშლის არსებულ იუზერს -- "DELETE"
   
-  - დაწერეთ ფუქნცია, რომელიც დაამატებს ახალ წიგნებს 
-  - დაწერეთ ფუქნცია, რომელიც ამოშლის არსებულ წიგნს
+  - დაწერეთ ფუქნცია, რომელიც დაამატებს ახალ წიგნებს -- POST
+  - დაწერეთ ფუქნცია, რომელიც ამოშლის არსებულ წიგნს -- DELETE
   
-  - დაწერეთ ფუნქცია, რომლის მეშვეობითაც იუზერი ისესხებს წიგნს
+  - დაწერეთ ფუნქცია, რომლის მეშვეობითაც იუზერი ისესხებს წიგნს   -- "PATCH"
   - დაწერეთ ფუნქცია, რომლის მეშვეობითაც იუზერი დააბრუნებს წიგნს
    */
 // ______ add new users ______
@@ -34,9 +34,9 @@
         console.error(error.message)
     }
   }
-  addUser("Sara")
+//   addUser("Sara")
 
-  // __________ DELETE user ___________
+  // __________ DELETE/Remove user ___________
 
   async function removeUser(userId) {
     try {
@@ -49,4 +49,73 @@
         console.error(error.message)
     }
   }
-//   removeUser(3)
+//   removeUser(5)
+// ____________ add POST new book _______________________
+
+async function addBook(name, author) {
+    try {
+        const addBookResponse = await fetch("http://localhost:3000/books",{
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                name, // object property shorthand
+                author, 
+            }),
+        });
+
+        if(!addBookResponse.ok) throw new Error("Failed to add new book")
+    } catch (error) {
+        console.error(error.message)
+    }
+}
+// addBook("The Grat Gatsby", "F. Scott Fitzgerald");
+// addBook("To Kill a Mockingbird","Harper Lee");
+
+// __________ remove DELETE book ____________
+async function removeBook(bookId) {
+    try {
+        const removeBookResponse = await fetch (`http://localhost:3000/books/${bookId}`, {
+            method: "DELETE"
+        });
+
+        if(!removeBookResponse.ok) throw new Error ("Failed to delete user") 
+    } catch (error) {
+        console.error(error.message)
+    }
+  }
+//   removeBook(5)
+
+
+
+
+// ________ იუზერი დააბრუნებს წიგნს PATCH _________
+async function returnBook(userId, bookId) {
+    try {
+        const user = await fetch(`http://localhost:3000/users/${userId}`);
+
+        if(!user.ok) throw new Error("this user doesnt exist");
+
+        const userInfo = await user.json();
+
+        const requestToReturn = await fetch(`http://localhost:3000/users/${userId}`,{
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                borrowedBooks:[ userInfo.borrowedBooks.filter( (item) => item.id !== bookId )]
+            })
+        })
+        if (!requestToReturn.ok) throw new Error("Failed to return book");
+
+        let book = userInfo.borrowedBooks;
+        let result = book.filter((item) => item.id == bookId);
+        console.log(userInfo);
+        addBook(result[0].name, result[0].author)
+    } catch (error) {
+        console.error(error.message);
+    }
+}
+returnBook(6,2);
