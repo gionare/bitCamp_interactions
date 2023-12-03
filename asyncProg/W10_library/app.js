@@ -50,3 +50,24 @@
     }
   }
 //   removeUser(3)
+
+// ______ add new book, POST _________
+async function addBook(name, author) {
+    try {
+        const addBookResponse = await fetch("http://localhost:3000/books", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify ( {
+                name,
+                author,
+            } ),
+        });
+
+        if (!addBookResponse.ok) throw new Error("Failed to post Book")
+    } catch (error) {
+        console.error(error.message)
+    }
+}
+addBook("To kill The Mokingbird", "Harper Lee")

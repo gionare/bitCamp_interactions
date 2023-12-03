@@ -19,6 +19,21 @@
       "name": "Sara",
       "borrowedBooks": [],
       "id": 5
+    },
+    {
+      "name": "Sara",
+      "borrowedBooks": [],
+      "id": 6
+    },
+    {
+      "name": "Sara",
+      "borrowedBooks": [],
+      "id": 7
+    },
+    {
+      "name": "Sara",
+      "borrowedBooks": [],
+      "id": 8
     }
   ],
   "books": [
@@ -26,6 +41,21 @@
       "id": 1,
       "name": "1984",
       "authot": "George Orwell"
+    },
+    {
+      "name": "The Great Gatsby",
+      "author": "Scott Fitzgerald",
+      "id": 2
+    },
+    {
+      "name": "The Great Gatsby",
+      "author": "Scott Fitzgerald",
+      "id": 3
+    },
+    {
+      "name": "To kill The Mokingbird",
+      "author": "Harper Lee",
+      "id": 4
     }
   ]
 }
