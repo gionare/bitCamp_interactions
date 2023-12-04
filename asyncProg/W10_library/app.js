@@ -50,14 +50,8 @@
     }
   }
 //   removeUser(5)
-// ____________ add POST new book _______________________
 
-async function addBook(name, author) {
-    try {
-        const addBookResponse = await fetch("http://localhost:3000/books",{
-//   removeUser(3)
-
-// ______ add new book, POST _________
+// ______ add new book, "POST" _________
 async function addBook(name, author) {
     try {
         const addBookResponse = await fetch("http://localhost:3000/books", {

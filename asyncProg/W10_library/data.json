@@ -18,14 +18,11 @@
     {
       "name": "Sara",
       "borrowedBooks": [],
-<<<<<<< HEAD
-=======
       "id": 5
     },
     {
       "name": "Sara",
       "borrowedBooks": [],
->>>>>>> 2a81111ba7e7eecd086f7901413db8f2b7eeb5ee
       "id": 6
     },
     {
@@ -37,49 +34,6 @@
       "name": "Sara",
       "borrowedBooks": [],
       "id": 8
-<<<<<<< HEAD
-    },
-    {
-      "name": "Sara",
-      "borrowedBooks": [],
-      "id": 9
-    },
-    {
-      "name": "Sara",
-      "borrowedBooks": [],
-      "id": 10
-    },
-    {
-      "name": "Sara",
-      "borrowedBooks": [],
-      "id": 11
-    },
-    {
-      "name": "Sara",
-      "borrowedBooks": [],
-      "id": 12
-    },
-    {
-      "name": "Sara",
-      "borrowedBooks": [],
-      "id": 13
-    },
-    {
-      "name": "Sara",
-      "borrowedBooks": [],
-      "id": 14
-    },
-    {
-      "name": "Sara",
-      "borrowedBooks": [],
-      "id": 15
-    },
-    {
-      "name": "Sara",
-      "borrowedBooks": [],
-      "id": 16
-=======
->>>>>>> 2a81111ba7e7eecd086f7901413db8f2b7eeb5ee
     }
   ],
   "books": [
@@ -89,31 +43,6 @@
       "authot": "George Orwell"
     },
     {
-<<<<<<< HEAD
-      "name": "The Grat Gatsby",
-      "author": "F. Scott Fitzgerald",
-      "id": 2
-    },
-    {
-      "name": "The Grat Gatsby",
-      "author": "F. Scott Fitzgerald",
-      "id": 3
-    },
-    {
-      "name": "To Kill a Mockingbird",
-      "author": "Harper Lee",
-      "id": 4
-    },
-    {
-      "name": "The Grat Gatsby",
-      "author": "F. Scott Fitzgerald",
-      "id": 5
-    },
-    {
-      "name": "To Kill a Mockingbird",
-      "author": "Harper Lee",
-      "id": 6
-=======
       "name": "The Great Gatsby",
       "author": "Scott Fitzgerald",
       "id": 2
@@ -127,7 +56,20 @@
       "name": "To kill The Mokingbird",
       "author": "Harper Lee",
       "id": 4
->>>>>>> 2a81111ba7e7eecd086f7901413db8f2b7eeb5ee
+    }
+  ],
+  "userInWeb": [
+    {
+      "name": "asdf",
+      "surname": "sfd",
+      "password": "sfd",
+      "id": 1
+    },
+    {
+      "name": "asdf",
+      "surname": "sfd",
+      "password": "sfd",
+      "id": 2
     }
   ]
 }
