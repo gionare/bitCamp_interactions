@@ -57,5 +57,12 @@
       "author": "Harper Lee",
       "id": 4
     }
+  ],
+  "userInWeb": [
+    {
+      "Name": "Giorgi",
+      "Surname": "Narekl",
+      "Password": "Password2000"
+    }
   ]
 }
