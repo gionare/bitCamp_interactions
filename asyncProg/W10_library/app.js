@@ -55,17 +55,23 @@
 async function addBook(name, author) {
     try {
         const addBookResponse = await fetch("http://localhost:3000/books",{
+//   removeUser(3)
+
+// ______ add new book, POST _________
+async function addBook(name, author) {
+    try {
+        const addBookResponse = await fetch("http://localhost:3000/books", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({
-                name, // object property shorthand
-                author, 
-            }),
+            body: JSON.stringify ( {
+                name,
+                author,
+            } ),
         });
 
-        if(!addBookResponse.ok) throw new Error("Failed to add new book")
+        if (!addBookResponse.ok) throw new Error("Failed to post Book")
     } catch (error) {
         console.error(error.message)
     }
@@ -119,3 +125,4 @@ async function returnBook(userId, bookId) {
     }
 }
 returnBook(6,2);
+addBook("To kill The Mokingbird", "Harper Lee")
