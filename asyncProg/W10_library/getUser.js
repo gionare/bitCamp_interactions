@@ -1,7 +1,7 @@
-let button = document.querySelector("button");
+let addButton = document.getElementById("addUser");
 let inputs = document.querySelectorAll("input");
 
-button.addEventListener("click", () => {
+addButton.addEventListener("click", () => {
  // debugger;
   let IterationSuccessful = true;
   for (let i = 0; i < inputs.length; i++) {
