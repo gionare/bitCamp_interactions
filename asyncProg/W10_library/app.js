@@ -49,9 +49,10 @@
         console.error(error.message)
     }
   }
-  removeUser(8)
+//   removeUser(8)
 
-// ______ add new book, "POST" _________
+// __________ add new book, "POST" _____________
+
 async function addBook(name, author) {
     try {
         const addBookResponse = await fetch("http://localhost:3000/books", {
@@ -85,9 +86,47 @@ async function removeBook(bookId) {
         console.error(error.message)
     }
   }
-//   removeBook(5)
+//  removeBook(3)
 
 
+// _________________  - დაწერეთ ფუნქცია, რომლის მეშვეობითაც იუზერი ისესხებს წიგნს   __________________
+
+async function borrowBook(userId, bookName) {
+    try {
+        // ვნახოთ უზერი არსებობს თუ არა, if not throw error 
+        const userResponse = await fetch(`http://localhost:3000/users/${userId}`) ;
+        if(!userResponse.ok) throw new Error("User doesn't exist");
+        // see if book is in library && if books array length is null throw error 
+        const bookResponse = await fetch(`http://localhost:3000/books/?name=${bookName}`);
+        const booksArr = await bookResponse.json();
+        // console.log(booksArr);
+        if(booksArr.length === 0) throw new Error("Book doesn't exist in our Library");
+
+        const book = booksArr[0];
+        // console.log(book);
+
+        const user = await userResponse.json();
+        // console.log(user);
+
+        // give book to user - using PATCH method
+        const borrowedBookResponse = await fetch(`http://localhost:3000/users/${userId}`,{
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // using PATCH method, i will add borrowBooks key in books endpoint.
+                // and will giove new value, which is booksArr 0 element
+                // spread operator to include all books which userId had borrowed already, if there is one, and dont loose them
+                borrowBooks:[...user.borrowedBooks, book], 
+            }),
+        });
+        if(!borrowedBookResponse.ok) throw new Error ("Failed to Borrow the Book ");
+    } catch (error) {
+        console.error(error.message);
+    }
+}
+// borrowBook(2, "1984")
 
 // ________ იუზერი დააბრუნებს წიგნს PATCH _________
 async function returnBook(userId, bookId) {

@@ -8,7 +8,14 @@
     {
       "name": "Ani",
       "borrowedBooks": [],
-      "id": 2
+      "id": 2,
+      "borrowBooks": [
+        {
+          "id": 1,
+          "name": "1984",
+          "authot": "George Orwell"
+        }
+      ]
     },
     {
       "name": "Nika",
@@ -36,11 +43,6 @@
       "name": "The Great Gatsby",
       "author": "Scott Fitzgerald",
       "id": 2
-    },
-    {
-      "name": "The Great Gatsby",
-      "author": "Scott Fitzgerald",
-      "id": 3
     },
     {
       "name": "To kill The Mokingbird",
