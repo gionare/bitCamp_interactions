@@ -1,7 +1,7 @@
 /* 2.  დაწერეთ პროგრამა, რომელიც მიმსგავსებული იქნება ბიბლიოთეკის ფუნქციონირებასთან. 
 გვექნება წიგნები, მომხმარებლები. იუზერებს შეეძლებათ წიგნების სესხება და ჩაბარება.
   
-  - api-ში გვექნება ორი ენდფოინთი - users და books:
+  - api-ში გვექნება ორი ენდფოინთი - users და books: 
       - user-ს ექნება ფროფერთები: id, name, borrowedBooks
       - book-ს ექნება ფროფერთები: id, name, author
   
@@ -49,7 +49,7 @@
         console.error(error.message)
     }
   }
-//   removeUser(5)
+  removeUser(8)
 
 // ______ add new book, "POST" _________
 async function addBook(name, author) {
@@ -89,7 +89,6 @@ async function removeBook(bookId) {
 
 
 
-
 // ________ იუზერი დააბრუნებს წიგნს PATCH _________
 async function returnBook(userId, bookId) {
     try {
@@ -118,5 +117,5 @@ async function returnBook(userId, bookId) {
         console.error(error.message);
     }
 }
-returnBook(6,2);
-addBook("To kill The Mokingbird", "Harper Lee")
+// returnBook(6,2);
+// addBook("To kill The Mokingbird", "Harper Lee");

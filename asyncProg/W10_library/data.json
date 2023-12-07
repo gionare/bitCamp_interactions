@@ -24,16 +24,6 @@
       "name": "Sara",
       "borrowedBooks": [],
       "id": 6
-    },
-    {
-      "name": "Sara",
-      "borrowedBooks": [],
-      "id": 7
-    },
-    {
-      "name": "Sara",
-      "borrowedBooks": [],
-      "id": 8
     }
   ],
   "books": [
@@ -70,6 +60,12 @@
       "surname": "sfd",
       "password": "sfd",
       "id": 2
+    },
+    {
+      "name": "adding ",
+      "surname": "new user ",
+      "password": "and password",
+      "id": 3
     }
   ]
 }
