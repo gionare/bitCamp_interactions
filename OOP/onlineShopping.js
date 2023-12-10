@@ -33,13 +33,13 @@ User Class:
         - getUserId(): Returns the user ID.
         - getUsername(): Returns the username.
         - getEmail(): Returns the email address.
-        - getProducts(): Returs the products
+        - getProducts(): Returs the products, which custome bought
 
 Create function called order, that will be used to empty shopping cart and give the products to user
 
 */
 // _____________________ P R O D U C T  C L A S S ________________________
-class product {
+class Product {
   #productId;
   #productName;
   #price;
@@ -69,9 +69,9 @@ class product {
   }
 }
 
-const product1 = new product("1", "pillow", 40);
-const product2 = new product("2", "LEGO car", 100);
-const product3 = new product("3", "MI TV LUX", 4000);
+const product1 = new Product("1", "pillow", 40);
+const product2 = new Product("2", "LEGO car", 100);
+const product3 = new Product("3", "MI TV LUX", 4000);
 // console.log(product1.productId);
 // console.log(product1.productName);
 // console.log(product1.getUserId());
@@ -79,7 +79,7 @@ console.log(product1.getProductInfo());
 console.log(product2.getProductInfo());
 
 // ________________ S H O P P I N G C A R T  C L A S S  ____________________
-class shoppingCart {
+class ShoppingCart {
   #cartId;
   #items;
   constructor(cartId, item) {
@@ -91,6 +91,10 @@ class shoppingCart {
   }
   getItems() {
     return this.#items;
+  }
+  // adding new method
+  getShopingCartInfo(){
+    return this.#items.map((product) => product.getProductInfo())
   }
   // push items in addItem[]
   addItem(product) {
@@ -113,7 +117,7 @@ class shoppingCart {
     );
   }
 }
-const shoppingCart1 = new shoppingCart("1");
+const shoppingCart1 = new ShoppingCart("1");
 // console.log(shoppingCart1.getItems());
 shoppingCart1.addItem(product1);
 shoppingCart1.addItem(product2);
@@ -122,20 +126,68 @@ shoppingCart1.addItem(product3);
 // console.log(shoppingCart1.getItems());
 // if we want to see whats inside each object in array
 // we will need to loop it and use getProductInfo method
-// use .map() for looping and also map will return each pproduct modified 
-let mappedArr = shoppingCart1.getItems().map((product) =>
-  product.getProductInfo()
-);
+// use .map() for looping and also map will return each pproduct modified
+let mappedArr = shoppingCart1
+  .getItems()
+  .map((product) => product.getProductInfo());
 console.log(mappedArr);
 
 // ____________________ U S E R  C L A S S ___________________
 
-class user {
+class User {
   #userId;
   #userName;
   #email;
   #products;
-  constuctor(){
+  constructor(userId, userName, email) {
+    this.#userId = userId;
+    this.#userName = userName;
+    this.#email = email;
+    this.#products = [];
+  }
 
+  getUserId() {
+    return this.#userId;
+  }
+  getUserName() {
+    return this.#userName;
+  }
+  getEmail() {
+    return this.#email;
+  }
+  getProducts() {
+    return this.#products;
+  }
+  // adding new method to give item to user 
+  orderProduct(product){
+    this.#products.push(product)
+  }
+  // adding new method to იუზერის პროდუქტებში ჩასული პროდუცტები
+  getUserProductsInfo(){
+    return this.#products.map((product) => product.getProductInfo());
   }
 }
+
+const user1 = new User("1", "Gio", "gionare93@gmail.com");
+console.log(user1.getUserName());
+
+// _______________ order ფუნქცია, that will be used to empty shopping cart and give the products to user ___________________
+// cart ში რასაც დავამატებთ, შემდეგ ის order() და ჩავამატოთ იუზერის products მასივში
+
+class Order {
+  static order(user, ShoppingCart) {
+    // create looping highOrder method for this ShoppingCart.getItems().
+    ShoppingCart.getItems().forEach((product) => {
+      ShoppingCart.removeItem(product);
+      user.orderProduct(product);
+    });
+  }
+}
+
+console.log("shopping cart before:  ", shoppingCart1.getShopingCartInfo());
+console.log("user products before: ", user1.getUserProductsInfo());
+
+Order.order(user1, shoppingCart1)
+
+console.log("user products after: ", user1.getUserProductsInfo());
+console.log("shopping cart after:  ", shoppingCart1.getShopingCartInfo());
