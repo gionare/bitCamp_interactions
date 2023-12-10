@@ -80,37 +80,62 @@ console.log(product2.getProductInfo());
 
 // ________________ S H O P P I N G C A R T  C L A S S  ____________________
 class shoppingCart {
-  #cartId
-  #items
-  constructor (cartId, item) {
+  #cartId;
+  #items;
+  constructor(cartId, item) {
     this.#cartId = cartId;
     this.#items = [];
   }
-  get cartId () {
+  get cartId() {
     return this.#cartId;
   }
-  get items () {
+  getItems() {
     return this.#items;
   }
   // push items in addItem[]
-  addItem (product) {
-    this.items.push(product);
+  addItem(product) {
+    this.#items.push(product);
   }
   // need logic to take out certuin element from []
   // 1. using splice(startIndex, howMany), so we need to know start index
-  // 2. 
+  // 2.
   removeItem(product) {
-    const index = this.items.indexOf(product);
-    if (index !== -1){
-    this.items.splice(index, 1)
+    const index = this.#items.indexOf(product);
+    if (index !== -1) {
+      this.#items.splice(index, 1);
     }
   }
-// __ - calculateTotal(): Calculates and returns the total price of items in the cart. __
-  calculateTotal () {
-    return this.#items.reduce((accumulator, product) => accumulator + product.getprice() ,0);
+  // __ - calculateTotal(): Calculates and returns the total price of items in the cart. __
+  calculateTotal() {
+    return this.#items.reduce(
+      (accumulator, product) => accumulator + product.getprice(),
+      0
+    );
   }
-
-
 }
 const shoppingCart1 = new shoppingCart("1");
-console.log(shoppingCart1.items());
+// console.log(shoppingCart1.getItems());
+shoppingCart1.addItem(product1);
+shoppingCart1.addItem(product2);
+shoppingCart1.addItem(product3);
+
+// console.log(shoppingCart1.getItems());
+// if we want to see whats inside each object in array
+// we will need to loop it and use getProductInfo method
+// use .map() for looping and also map will return each pproduct modified 
+let mappedArr = shoppingCart1.getItems().map((product) =>
+  product.getProductInfo()
+);
+console.log(mappedArr);
+
+// ____________________ U S E R  C L A S S ___________________
+
+class user {
+  #userId;
+  #userName;
+  #email;
+  #products;
+  constuctor(){
+
+  }
+}
