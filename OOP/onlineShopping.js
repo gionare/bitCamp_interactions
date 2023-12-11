@@ -75,8 +75,8 @@ const product3 = new Product("3", "MI TV LUX", 4000);
 // console.log(product1.productId);
 // console.log(product1.productName);
 // console.log(product1.getUserId());
-console.log(product1.getProductInfo());
-console.log(product2.getProductInfo());
+// console.log(product1.getProductInfo());
+// console.log(product2.getProductInfo());
 
 // ________________ S H O P P I N G C A R T  C L A S S  ____________________
 class ShoppingCart {
@@ -109,6 +109,9 @@ class ShoppingCart {
       this.#items.splice(index, 1);
     }
   }
+  clear() {
+    this.#items = [];
+  }
   // __ - calculateTotal(): Calculates and returns the total price of items in the cart. __
   calculateTotal() {
     return this.#items.reduce(
@@ -117,6 +120,7 @@ class ShoppingCart {
     );
   }
 }
+
 const shoppingCart1 = new ShoppingCart("1");
 // console.log(shoppingCart1.getItems());
 shoppingCart1.addItem(product1);
@@ -130,7 +134,7 @@ shoppingCart1.addItem(product3);
 let mappedArr = shoppingCart1
   .getItems()
   .map((product) => product.getProductInfo());
-console.log(mappedArr);
+// console.log(mappedArr);
 
 // ____________________ U S E R  C L A S S ___________________
 
@@ -169,7 +173,7 @@ class User {
 }
 
 const user1 = new User("1", "Gio", "gionare93@gmail.com");
-console.log(user1.getUserName());
+// console.log(user1.getUserName());
 
 // _______________ order ფუნქცია, that will be used to empty shopping cart and give the products to user ___________________
 // cart ში რასაც დავამატებთ, შემდეგ ის order() და ჩავამატოთ იუზერის products მასივში
@@ -178,9 +182,9 @@ class Order {
   static order(user, ShoppingCart) {
     // create looping highOrder method for this ShoppingCart.getItems().
     ShoppingCart.getItems().forEach((product) => {
-      ShoppingCart.removeItem(product);
       user.orderProduct(product);
     });
+    ShoppingCart.clear();
   }
 }
 
