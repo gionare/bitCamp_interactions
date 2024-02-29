@@ -4,3 +4,12 @@
   padding: 2rem;
   text-align: center;
 }
+body {
+  display: flex;
+}
+
+.card {
+  width: 100%;
+  /* background-color: grey; */
+  border-radius: 15px;
+}

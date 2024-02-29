@@ -6,6 +6,7 @@ export default function TodoList() {
 
   function handleInputChange(event) {
     setInputValue(event.target.value);
+    // console.log(event);
   }
   function handleSubmit() {
     if (inputValue.trim()) {
