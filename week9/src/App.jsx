@@ -8,6 +8,7 @@ import CharacterCounter from "./Components/CharacterCounter/CharacterCounter";
 import TodoList from "./Components/TodoList/TodoList";
 import ColorSwitcher from "./Components/ColorSwitcher/ColorSwitcher";
 import SearchFilter from "./Components/SearchFilter/SearchFilter";
+import DragDropList from "./Components/DragDropList/DragDropList";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <TodoList />
       <ColorSwitcher />
       <SearchFilter />
+      <DragDropList />
     </div>
   );
 }
